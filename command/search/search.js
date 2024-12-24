@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import hoi from '../../steam/steam_hook.js'
 
-function createSearchResultEmbed(data) {
+export function createSearchResultEmbed(data) {
     const embed = new EmbedBuilder()
                 .setColor(0x0099FF)
                 .setTitle("HOI4 Games")
@@ -32,7 +32,7 @@ export default {
         const query = interaction.options.getString("query") ?? undefined;
 
         const responseData = await hoi.search(query)
-        if (responseData.length == 0)
+        if (responseData.length === 0)
             await interaction.reply("No lobbies could be found!")
         else {
             const responseEmbed = createSearchResultEmbed(responseData)
