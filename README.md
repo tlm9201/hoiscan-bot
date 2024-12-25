@@ -21,4 +21,4 @@ in discord
 * @ewof javascript larp slop
 
 # license 
-* [agpl][LICENSE]
+* [AGPL](LICENSE)
